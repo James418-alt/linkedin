@@ -8,6 +8,8 @@ import Content from "./content";
 import PostCompnent from "./PostCompnent";
 import Link from "next/link";
 import Post from "./Post";
+import { MdCamera } from "react-icons/md";
+import { CameraIcon } from "lucide-react";
 
 const page = () => {
   const navs = [
@@ -32,16 +34,43 @@ const page = () => {
     redirect("/login");
   } else {
     return (
-      <div className={postToggle ? "h-[100vh] overflow-x-hidden" : ""}>
-        <Header />
+      <div
+        className={postToggle ? "h-[100vh] overflow-x-hidden w-full" : "w-full"}
+      >
         {postToggle ? <Post /> : ""}
+        <Header />
 
-        <div className="grid grid-cols-10 gap-5 px-20 pt-20">
-          <div className="col-span-2 flex flex-col gap-1   ">
-            <div className="border h-[370px] bg-white border-neutral-300 rounded-md">
-              1
+        <div className="grid w-full grid-cols-1 md:grid-cols-10 gap-5 md:px-20 px-5 pt-20">
+          <div className="md:col-span-2 w-full flex flex-col gap-1   ">
+            <div className="border pb-4  w-[500px] md:w-full md:h-[370px] bg-white  border-neutral-300 rounded-md">
+              <div className="relative">
+                <div className="bg-gray-300 h-[80px] "></div>
+                <div className="border-2 flex items-center justify-center border-white rounded-full w-[60px] h-[60px] bg-gray-300 top-[50px] md:right-[80px] right-[220px] absolute">
+                  <CameraIcon className="text-[20px] text-blue-600" />
+                </div>
+              </div>
+              <div className="flex justify-center items-center mt-10 md:border-b md:pb-4">
+                <div className="flex flex-col items-center justify-center">
+                  <h1 className="text-[14px] text-neutral-500 font-semibold pb-1">
+                    Welcome, Gomenti
+                  </h1>
+                  <p className="text-[11px]  text-blue-600 font-light">
+                    Add a Photo
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-3 py-2 leading-5 border-b pb-2 hidden md:block">
+                <h1 className="font-medium text-[10px] text-neutral-500">
+                  Profile Viewers
+                </h1>
+                <h1 className="font-medium text-[10px] text-neutral-500">
+                  View all Analytics
+                </h1>
+              </div>
             </div>
-            <div className="border h-[100px] bg-white border-neutral-300 rounded-md">
+
+            <div className="border h-[100px] bg-white border-neutral-300 hidden md:block rounded-md">
               2
             </div>
           </div>
@@ -52,7 +81,7 @@ const page = () => {
             <PostCompnent />
             <PostCompnent />
           </div>
-          <div className="col-span-3 flex flex-col gap-[-10px]    ">
+          <div className="col-span-3 hidden md:flex flex-col gap-[-10px]    ">
             <div className="border h-[450px] bg-white border-neutral-300 rounded-md">
               1
             </div>

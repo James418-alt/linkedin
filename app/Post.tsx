@@ -1,17 +1,24 @@
 "use client";
 import { addPost } from "@/app/global/slice";
+import cloudinary from "@/utils/cloudinary";
+import { imageUpload } from "@/utils/imageUpload";
 import { redirect } from "next/navigation";
 import React, { useState } from "react";
-import { MdCloseFullscreen, MdPerson } from "react-icons/md";
+import { MdCloseFullscreen, MdImage, MdPerson } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 
 const Post = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const [changed, setChanged] = useState(false);
+  const formAction = async (formData: FormData) => {
+    const content = formData.get("content");
+    const image = formData.get("image") as File;
+    // const img = imageUpload(image);
+  };
   return (
     <div
-      className="w-[98.5vw] absolute backdrop-blur-sm overflow-hidden h-[100vh] flex items-center flex-col"
+      className="md:w-[98.5vw]  relative backdrop-blur-sm  flex items-center flex-col  "
       style={{
         background: "rgba(59, 59, 59, 0.2)",
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
@@ -28,7 +35,7 @@ const Post = () => {
             </div>
           </div>
           <div
-            className="cursor-pointer p-2 mb-4 bg-red-500 text-white rounded-full border"
+            className="cursor-pointer p-2 mb-4 bg-blue-950 text-white rounded-full border"
             onClick={() => {
               setChanged(false);
               dispatch(addPost());
@@ -44,17 +51,25 @@ const Post = () => {
           <hr />
         </div>
 
-        <form className="w-full h-full">
+        <form action={formAction} className="w-full h-full">
           <div className="flex flex-col mb-3">
             <textarea
+              name="content"
               placeholder="What's on your mind"
-              className=" h-[350px] resize-none p-1 outline-none"
+              className=" h-[320px] resize-none p-1 outline-none"
               value={text}
               onChange={(e) => {
                 setText(e.target.value);
                 setChanged(true);
               }}
             ></textarea>
+            <div>
+              <label htmlFor="file">
+                <MdImage className="text-[40px] text-blue-950" />
+              </label>
+
+              <input name="image" type="file" id="file" className="hidden" />
+            </div>
           </div>
           {changed ? (
             <button

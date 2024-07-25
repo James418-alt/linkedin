@@ -6,7 +6,7 @@ import { MdComment, MdSave, MdShare } from "react-icons/md";
 const PostCompnent = () => {
   return (
     <div className="border rounded-md mt-3 bg-white border-neutral-300">
-      <div className=" px-4 py-2">
+      <div className=" px-4 py-4">
         <div className="flex justify-between">
           <div className="flex gap-3 items-center">
             <Image
