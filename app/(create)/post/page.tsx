@@ -5,7 +5,7 @@ import React from "react";
 import { MdCloseFullscreen } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 
-const page = () => {
+const Page = () => {
   const postToggle = useSelector((state: any) => {
     return state.postToggle;
   });
@@ -61,4 +61,4 @@ const page = () => {
     </div>
   );
 };
-export default page;
+export default Page;
