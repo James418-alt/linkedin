@@ -11,7 +11,7 @@ import Post from "./Post";
 import { MdCamera } from "react-icons/md";
 import { CameraIcon } from "lucide-react";
 
-const page = () => {
+const Page = () => {
   const navs = [
     { id: 0, name: "About", url: "#" },
     { id: 1, name: "Acessibility", url: "#" },
@@ -105,4 +105,4 @@ const page = () => {
   }
 };
 
-export default page;
+export default Page;
