@@ -18,7 +18,7 @@ const Page = () => {
   const dispatch = useDispatch();
   const { toast } = useToast();
   const formAction = async (formData: FormData) => {
-    const url = "http://localhost:3000/api/login";
+    const url = "https://linkedin-wine.vercel.app/api/login";
     const email = formData.get("email");
     const password = formData.get("password");
     await fetch(url, {
