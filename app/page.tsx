@@ -34,18 +34,16 @@ const Page = () => {
     redirect("/login");
   } else {
     return (
-      <div
-        className={postToggle ? "h-[100vh] overflow-x-hidden w-full" : "w-full"}
-      >
+      <div className={postToggle ? "h-[100vh] overflow-x-hidden" : "w-full"}>
         {postToggle ? <Post /> : ""}
         <Header />
 
         <div className="grid w-full grid-cols-1 md:grid-cols-10 gap-5 md:px-20 px-5 pt-20">
           <div className="md:col-span-2 w-full flex flex-col gap-1   ">
-            <div className="border pb-4  w-[500px] md:w-full md:h-[370px] bg-white  border-neutral-300 rounded-md">
+            <div className="border pb-4  w-[280px] md:w-full md:h-[370px] bg-white  border-neutral-300 rounded-md">
               <div className="relative">
                 <div className="bg-gray-300 h-[80px] "></div>
-                <div className="border-2 flex items-center justify-center border-white rounded-full w-[60px] h-[60px] bg-gray-300 top-[50px] md:right-[80px] right-[220px] absolute">
+                <div className="border-2 flex items-center justify-center border-white rounded-full w-[60px] h-[60px] bg-gray-300 top-[50px] md:right-[80px] right-[110px] absolute">
                   <CameraIcon className="text-[20px] text-blue-600" />
                 </div>
               </div>

@@ -61,7 +61,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex gap-6 items-center">
+        <div className="md:flex gap-6 items-center hidden">
           {navs.map((el: any) => (
             <div key={el.id} className="flex flex-col items-center">
               <div className="text-[30px] md:text-[22px] md:text-neutral-500 text-neutral-800">

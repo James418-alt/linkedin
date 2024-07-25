@@ -42,18 +42,19 @@ const PostCompnent = () => {
       <div className="px-[40px] py-5 flex justify-between border-t mt-2">
         <div className="flex gap-1 items-center cursor-pointer">
           <IoMdThumbsUp className="text-[20px] text-neutral-500" />
-          <h1>Like</h1>
+          <h1 className="hidden md:block">Like</h1>
         </div>
         <div className="flex gap-1 items-center cursor-pointer">
           <MdComment className="text-neutral-500" />
-          <h1>Comment</h1>
+          <h1 className="hidden md:block">Comment</h1>
         </div>
         <div className="flex gap-1 items-center cursor-pointer">
           <MdShare className="text-neutral-500" />
-          <h1>Share</h1>
+          <h1 className="hidden md:block">Share</h1>
         </div>
         <div className="flex gap-1 items-center cursor-pointer">
-          <MdSave className="text-neutral-500" /> <h1>Save</h1>
+          <MdSave className="text-neutral-500" />{" "}
+          <h1 className="hidden md:block">Save</h1>
         </div>
       </div>
     </div>
