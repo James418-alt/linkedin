@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signUser } from "@/app/global/slice";
 import { dbConfig } from "@/utils/dbConfig";
 
-const page = () => {
+const Page = () => {
   const data = useSelector((state: any) => {
     return state.userState;
   });
@@ -85,4 +85,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
