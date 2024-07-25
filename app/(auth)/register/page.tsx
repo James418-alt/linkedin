@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   const formAction = async (formData: FormData) => {
     "use server";
-    const url = "http://localhost:3000/api/register";
+    const url = "https://linkedin-wine.vercel.app/api/register";
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
