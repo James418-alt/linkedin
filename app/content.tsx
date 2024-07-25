@@ -23,7 +23,7 @@ const Content = () => {
           />
         </div>
       </div>
-      <div className="flex justify-between px-2 md:px-14">
+      <div className="flex justify-between px-5 md:px-14">
         <div
           onClick={() => dispatch(addPost())}
           className="flex gap-2 items-center cursor-pointer"
