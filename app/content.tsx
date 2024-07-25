@@ -14,7 +14,7 @@ const Content = () => {
         <div className="flex items-center justify-center rounded-full border h:40px md:h-[50px] cursor-pointer w-[40px] md:w-[55px]">
           <MdPerson className="text-[40px]" />
         </div>
-        <div onClick={() => dispatch(addPost())} className="w-full">
+        <div className="w-full">
           <input
             // onClick={redirect("/post")}
             className="border hover:bg-gray-100 transition-all duration-300 cursor-pointer outline-none w-full h-[50px] rounded-full px-4 placeholder:font-semibold placeholder:text-[12px] placeholder:text-black"
@@ -25,21 +25,21 @@ const Content = () => {
       </div>
       <div className="flex justify-between px-5 md:px-14">
         <div
-          onClick={() => dispatch(addPost())}
+          // onClick={() => dispatch(addPost())}
           className="flex gap-2 items-center cursor-pointer"
         >
           <MdImage color="blue" className="text-[20px]" />
           <p className="text-[14px] font-semibold text-neutral-600">Media</p>
         </div>
         <div
-          onClick={() => dispatch(addPost())}
+          // onClick={() => dispatch(addPost())}
           className="flex gap-2 items-center cursor-pointer"
         >
           <IoMdCalendar color="#c37d16" className="text-[20px]" />
           <p className="text-[14px] font-semibold text-neutral-600">Event</p>
         </div>
         <div
-          onClick={() => dispatch(addPost())}
+          // onClick={() => dispatch(addPost())}
           className="flex gap-2 items-center cursor-pointer"
         >
           <MdArticle color="#e06847" className="text-[20px]" />
